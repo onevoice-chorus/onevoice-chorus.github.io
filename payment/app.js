@@ -33,6 +33,15 @@ function personHtml(k, i) {
     '<p class="warn kanaWarn hidden">全角のカタカナで入力してください</p></div>';
 }
 
+// 混みあって返事がもらえなかったときは、少し待って自動で送り直す（最初の1回＋最大3回）
+function fetchRetry(url, retries) {
+  return fetch(url).then(function (r) { return r.json(); }).catch(function (err) {
+    if (retries <= 0) throw err;
+    var wait = (4 - retries) * 2000 + Math.floor(Math.random() * 1000); // 2秒・4秒・6秒ほど
+    return new Promise(function (ok) { setTimeout(ok, wait); }).then(function () { return fetchRetry(url, retries - 1); });
+  });
+}
+
 // 照合ページ
 function initEntry(kind) {
   var k = KINDS[kind];
@@ -93,7 +102,7 @@ function initEntry(kind) {
     $('btn').textContent = '確認中です...';
     var url = API_URL + '?action=verifyWinner&kind=' + encodeURIComponent(kind) +
       '&people=' + encodeURIComponent(JSON.stringify(people));
-    fetch(url).then(function (r) { return r.json(); }).then(function (res) {
+    fetchRetry(url, 3).then(function (res) {
       if (res && res.verified === true) {
         try {
           sessionStorage.setItem(storeKey(kind), JSON.stringify(people.map(function (x) {
