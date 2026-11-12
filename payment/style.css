@@ -1,0 +1,30 @@
+:root{--ink:#203f66;--blue:#28325c;--blue-deep:#172734;--paper:#eaedf1;--line:#c8d0db;--green:#06c755;--white:#fff;--red:#c62828;}
+*{box-sizing:border-box;}
+body{margin:0;font-family:"Zen Kaku Gothic New",sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;}
+.hidden{display:none !important;}
+.top{background:linear-gradient(160deg,var(--blue) 0%,var(--blue-deep) 100%);color:var(--white);text-align:center;padding:22px 16px 18px;}
+.logo{font-family:"Great Vibes",cursive;font-size:44px;line-height:1.1;}
+.sub{font-size:12px;letter-spacing:.08em;margin-top:4px;opacity:.9;}
+.wrap{max-width:480px;margin:0 auto;padding:20px 16px 40px;}
+h1{font-size:20px;font-weight:900;margin:0 0 8px;letter-spacing:.06em;}
+.kind{display:inline-block;margin:0 0 12px;padding:4px 14px;border-radius:999px;background:var(--blue);color:var(--white);font-weight:700;font-size:15px;}
+p{margin:8px 0;}
+label{display:block;margin-top:12px;font-weight:700;font-size:14px;}
+input{width:100%;padding:10px;margin-top:4px;font-size:16px;border:1px solid var(--line);border-radius:6px;background:var(--white);color:var(--ink);font-family:inherit;}
+input:focus{outline:2px solid var(--blue);outline-offset:0;border-color:var(--blue);}
+.nameRow{display:flex;gap:8px;}
+.nameRow label{flex:1;min-width:0;}
+.note{font-size:13px;margin:8px 0 0;}
+.person{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:6px 14px 14px;margin-top:12px;}
+.person h4{margin:8px 0 0;font-size:14px;display:flex;justify-content:space-between;align-items:center;}
+button{font-family:inherit;cursor:pointer;}
+button[type=submit]{margin-top:24px;width:100%;padding:14px;background:var(--green);color:var(--white);border:none;border-radius:999px;font-size:17px;font-weight:700;letter-spacing:.06em;}
+button[type=submit]:disabled{background:#9aa5b4;cursor:default;}
+.del,.add{width:auto;margin:0;padding:4px 12px;font-size:13px;background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:999px;}
+.add{margin-top:12px;padding:8px 16px;font-size:14px;font-weight:700;}
+.warn{margin:6px 0 0;color:var(--red);font-size:14px;font-weight:700;}
+.error{margin:16px 0 0;padding:12px 14px;border:2px solid var(--red);border-radius:8px;background:#fff4f4;color:var(--red);font-size:15px;white-space:pre-line;}
+.ok{margin:12px 0;padding:12px 14px;border:1px solid var(--line);border-left:5px solid var(--green);border-radius:8px;background:var(--white);font-size:15px;}
+#who{white-space:pre-line;font-weight:700;}
+#ticketme{margin-top:16px;}
+.total{margin:12px 0;font-size:18px;font-weight:900;}

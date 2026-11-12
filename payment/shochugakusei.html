@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ONE VOICE 2027 参加費のお支払い（小中学生）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+<div class="logo">OneVoice</div>
+<div class="sub">1000人合唱プロジェクト feat. Symphonic Starmine 2027</div>
+</header>
+<main class="wrap">
+<h1>参加費のお支払い</h1>
+<div class="kind">小中学生（12,800円）</div>
+<p>当選された方だけが購入できます。お子様のエントリー番号とお名前を入力してください。一緒にエントリーしたお子様が複数いる場合は、「＋ お子様を追加」で全員分を入力してください（5名まで）。</p>
+<form id="form" novalidate>
+<p class="note">・お名前は、エントリーのときと同じ字で入力してください（日本語は全角）。<br>・外国籍の方は、姓・名を英字（ローマ字）でも入力できます。<br>・フリガナは、全角カタカナで入力してください。</p>
+<div id="people"></div>
+<button type="button" id="add" class="add">＋ お子様を追加（5名まで）</button>
+<div id="error" class="error hidden"></div>
+<button type="submit" id="btn">次へ</button>
+</form>
+</main>
+<script src="app.js"></script>
+<script>initEntry('shochugakusei');</script>
+</body>
+</html>
