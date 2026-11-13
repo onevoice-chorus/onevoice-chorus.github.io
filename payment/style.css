@@ -6,7 +6,7 @@ body{margin:0;font-family:"Zen Kaku Gothic New",sans-serif;background:var(--pape
 .logo{font-family:"Great Vibes",cursive;font-size:44px;line-height:1.1;}
 .sub{font-size:12px;letter-spacing:.08em;margin-top:4px;opacity:.9;}
 .wrap{max-width:480px;margin:0 auto;padding:20px 16px 40px;}
-h1{font-size:20px;font-weight:900;margin:0 0 8px;letter-spacing:.06em;}
+h1{font-size:20px;font-weight:900;margin:0 0 8px;letter-spacing:.06em;cursor:pointer;}
 .kind{display:inline-block;margin:0 0 12px;padding:4px 14px;border-radius:999px;background:var(--blue);color:var(--white);font-weight:700;font-size:15px;}
 p{margin:8px 0;}
 label{display:block;margin-top:12px;font-weight:700;font-size:14px;}
@@ -18,8 +18,8 @@ input:focus{outline:2px solid var(--blue);outline-offset:0;border-color:var(--bl
 .person{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:6px 14px 14px;margin-top:12px;}
 .person h4{margin:8px 0 0;font-size:14px;display:flex;justify-content:space-between;align-items:center;}
 button{font-family:inherit;cursor:pointer;}
-button[type=submit]{margin-top:24px;width:100%;padding:14px;background:var(--green);color:var(--white);border:none;border-radius:999px;font-size:17px;font-weight:700;letter-spacing:.06em;}
-button[type=submit]:disabled{background:#9aa5b4;cursor:default;}
+button[type=submit],input[type=submit]{margin-top:24px;width:100%;padding:14px;background:var(--green);color:var(--white);border:none;border-radius:999px;font-size:17px;font-weight:700;letter-spacing:.06em;cursor:pointer;}
+button[type=submit]:disabled,input[type=submit]:disabled{background:#9aa5b4;cursor:default;}
 .del,.add{width:auto;margin:0;padding:4px 12px;font-size:13px;background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:999px;}
 .add{margin-top:12px;padding:8px 16px;font-size:14px;font-weight:700;}
 .warn{margin:6px 0 0;color:var(--red);font-size:14px;font-weight:700;}
